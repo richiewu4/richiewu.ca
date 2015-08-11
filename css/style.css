@@ -1,0 +1,90 @@
+body img {
+	width: 50%;
+	height: 50%;
+}
+
+body {
+	background-color: #fbf6f7;
+}
+
+p, h1, li, span, a {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/*
+
+intro page
+
+*/
+
+.pos_center {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.up_case {
+	text-transform: uppercase;
+}
+
+.text_align {
+	text-align: center;
+}
+
+.name_size {
+	font-size: 40px;
+}
+.last_name {
+	text-transform: bold;
+}
+
+.school_size {
+	font-size: 20px;
+}
+
+.entry_button a:hover{
+	text-decoration: none;	
+}
+
+.grad_class {
+	font-size: 8px;
+	margin-top: -12px;
+}
+
+
+
+
+
+
+
+/*main content*/
+/*about*/
+#about {
+  margin-top: 5%;
+  margin-left: 15%;
+}
+
+
+
+/*left side nav*/
+#my_name {
+  margin-top: 80%;
+  text-align: center;
+}
+
+.leftSideNav {
+  background-color: #E53935;
+}
+
+#sideNavList {
+  text-align: center;
+  margin-top: 50%;
+}
+
+#sideNavList a {
+  text-decoration: none;
+  color: #fff;
+}
+/*right side nav*/

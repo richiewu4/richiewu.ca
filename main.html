@@ -9,6 +9,12 @@
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+      <!-- fonts -->
+      <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+      <!-- icons -->
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
       <!-- angular material -->
       <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
 
@@ -41,13 +47,13 @@
         <section layout="row" flex>
           <!-- sidenav -->
           <md-sidenav class="leftSideNav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-            <h1 id="my_name"> Richard <br> Wu </h1>
-
+            <a id="my_name" href="index.html"><h1> Richard <br> <span id="last_name"> Wu </span> </h1></a>
+            <!-- <i class="fa fa-smile-o fa-5x"></i> -->
             <ul id="sideNavList">
-              <li><a href="#"> About Me </a></li>
-              <li><a href="#"> Resume </a></li>
-              <li><a href="#"> Contact </a></li>
-              <li><a href="#"> More? </a></li>
+              <li><md-button md-no-ink class="md-primary"><a href="#about">About Me</a></md-button></li>
+              <li><md-button md-no-ink class="md-primary"><a href="#resume">Resume</a></md-button></li>
+              <li><md-button md-no-ink class="md-primary"><a href="#about">Products</a></md-button></li>
+              <li><md-button md-no-ink class="md-primary"><a href="#about">More?</a></md-button></li>
             </ul>
 
             <ul id="socialMedia">
@@ -59,21 +65,80 @@
           <md-content class="mainContent" flex layout-padding>
             <div layout="column" layout-fill layout-align="top center">
               <section id="about">
+                <!-- about me -->
+                <div id="about_me_section">
+                  <h1 class="md-display-3"> About Me </h1>
+                    <div class="about_me_row row">
+                      <div class="col-md-7">
+                        <p id="about_paragraph">
+                          Hi, welcome to my portfolio. I am an electrical engineering student with a very diverse set of interests and experiences!
+                          I have become passionate about the impact that technology has been making in the world around us. The past few years almost seem like the Renaissance period.
+                          I want to join this movement and create an impact in my areas of interest! I am seeking an internship in the Tech Sector! <br/> <br/>
+                          Eventually, I want to work as a product manager, but I think to be successful at that, I need to get experience as a Software Developer first, so that's role I am currently pursuing!
+                        </p>
+                      </div>
+                    </div>
+                </div>
+                <!-- skills -->
+                <div id="skills_section" ng-controller="skillsCtrl">
+                  <h1 class="md-display-1"> Skills </h1>
+                  <h3> Web Development </h3>
+                  <div class="skills_bar" ng-repeat="skill in skills">
+                    <div class="skills_row row">
+                      <div class="skill_name col-md-4">
+                        {{skill.skillName}}
+                      </div>
+                      <div class="progress_bar col-md-8">
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{skill.skillLevel}}%">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-                <h1 class="md-display-3"> About Me </h1>
+                  <h3> Languages </h3>
+                  <div class="language_bar" ng-repeat="language in languages">
+                    <div class="skills_row row">
+                      <div class="skill_name col-md-4">
+                        {{language.skillName}}
+                      </div>
+                      <div class="progress_bar col-md-8">
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{language.skillLevel}}%">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-
-                <h1 class="md-display-1"> Skills </h1>
-                <div>
-                  <md-button ng-click="toggleRight()"
-                    class="md-raised md-primary">
-                    &nbsp Programming Timeline &nbsp
-                  </md-button>
+                  <div id="timeline_button">
+                    <md-button ng-click="toggleRight()"
+                      class="md-raised md-primary">
+                      &nbsp Programming Timeline &nbsp
+                    </md-button>
+                  </div>
                 </div>
 
-                <h1 class="md-display-1"> In the Industry </h1>
-                <h1 class="md-display-1"> In the Community </h1>
-                <h1 class="md-display-1"> On a Deeper Level </h1>
+                <!-- In the Industry -->
+                <div id="industry_section">
+                  <h1 class="md-display-1"> In the Industry </h1>
+                </div>
+                <!-- In the Community -->
+                <div id="community_section">
+                  <h1 class="md-display-1"> In the Community </h1>
+                </div>
+                <!-- On a Deeper Level -->
+                <div id="deeper_section">
+                  <h1 class="md-display-1"> On a Deeper Level </h1>
+                </div>
+              </section>
+
+              <section id= "resume">
+                <h1 class="md-display-3"> Resume </h1>
+              </section>
+
+              <section id= "more">
               </section>
 
             </div>
@@ -83,22 +148,14 @@
           <!-- right side nav -->
           <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
             <md-toolbar class="md-theme-light">
-              <h1 class="md-toolbar-tools">Sidenav Right</h1>
+              <h1 class="md-toolbar-tools">Programming Timeline</h1>
             </md-toolbar>
             <md-content ng-controller="RightCtrl" layout-padding>
-              <form>
-                <md-input-container>
-                  <label for="testInput">Test input</label>
-                  <input type="text" id="testInput"
-                         ng-model="data" md-sidenav-focus>
-                </md-input-container>
-              </form>
               <md-button ng-click="close()" class="md-primary">
-                Close Sidenav Right
+                Close Timeline
               </md-button>
             </md-content>
           </md-sidenav>
-
         </section>
       </div>
 

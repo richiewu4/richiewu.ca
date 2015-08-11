@@ -1,22 +1,21 @@
-body img {
-	width: 50%;
-	height: 50%;
+p, h1, h2, h3, h4, h5, h6, li, span, a {
+	font-family: 'Lato', sans-serif;
 }
 
 body {
+	margin: 0;
+	padding: 0;
+}
+
+/*********************intro page********************/
+.index_body {
 	background-color: #fbf6f7;
 }
 
-p, h1, li, span, a {
-	font-family: 'Source Sans Pro', sans-serif;
+.index_img {
+	width: 50%;
+	height: 50%;
 }
-
-
-/*
-
-intro page
-
-*/
 
 .pos_center {
 	position: fixed;
@@ -45,7 +44,7 @@ intro page
 }
 
 .entry_button a:hover{
-	text-decoration: none;	
+	text-decoration: none;
 }
 
 .grad_class {
@@ -55,23 +54,63 @@ intro page
 
 
 
+/*********************main content*********************/
 
+/*****about*****/
 
-
-
-/*main content*/
-/*about*/
+/*about me*/
 #about {
   margin-top: 5%;
   margin-left: 15%;
 }
 
+.about_me_row p {
+	margin-top: 10px;
+}
+
+/*skills*/
+.progress_bar {
+	margin-left: -25%;
+	width: 40%;
+}
+
+.skill_name {
+	margin-left:5px;
+}
+
+#timeline_button {
+	margin-top: 20px;
+}
+/*industry*/
+
+#industry_section {
+	margin-top: 5%;
+}
+
+/*community*/
+
+/*deeper level*/
 
 
-/*left side nav*/
+/*****left side nav*****/
 #my_name {
-  margin-top: 80%;
+  margin-top: 150%;
   text-align: center;
+	color: #000;
+	margin-left: -10%;
+}
+
+#my_name h1 {
+	font-size: 50px;
+	font-weight: bolder;
+}
+
+/*#last_name {
+	margin-left: -25%;
+}*/
+
+#my_name:hover {
+	text-decoration: none;
 }
 
 .leftSideNav {
@@ -80,11 +119,22 @@ intro page
 
 #sideNavList {
   text-align: center;
-  margin-top: 50%;
+  margin-top: 20%;
+	margin-left: -30%;
 }
 
 #sideNavList a {
   text-decoration: none;
   color: #fff;
 }
-/*right side nav*/
+
+#sideNavList li {
+	margin-top: 10px;
+}
+
+i {
+	text-align: center;
+	margin-left: -30%;
+}
+
+/*****right side nav*****/

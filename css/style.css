@@ -60,7 +60,7 @@ body {
 
 /*about me*/
 #about {
-  margin-top: 5%;
+  margin-top: 45px;
   margin-left: 15%;
 }
 
@@ -70,7 +70,7 @@ body {
 
 /*skills*/
 .progress_bar {
-	margin-left: -25%;
+	margin-left: -40px;
 	width: 40%;
 }
 
@@ -94,8 +94,8 @@ body {
 
 /*****left side nav*****/
 #my_name {
-  margin-top: 150%;
-  text-align: center;
+  	margin-top: 50px;
+  	text-align: center;
 	color: #000;
 	margin-left: -10%;
 }
@@ -118,8 +118,8 @@ body {
 }
 
 #sideNavList {
-  text-align: center;
-  margin-top: 20%;
+  	text-align: center;
+  	margin-top: 20%;
 	margin-left: -30%;
 }
 

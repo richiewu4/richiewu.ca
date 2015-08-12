@@ -1,5 +1,13 @@
-<htmL>
+<!doctype html>
+<html lang="en">
     <head>
+      <meta charset="utf-8">
+  		<meta content="IE=edge" http-equiv="X-UA-Compatible">
+  		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7" />
+  		<meta name="description" content="Welcome to Richard Wu's Official Website">
+      <title>Richard Wu Porfolio </title>
+      <!-- favicon -->
+      <link rel="icon" href="img/favicon.png" type="image/png" sizes="16x16">
 
       <!-- bootstrap -->
       <!-- Latest compiled and minified CSS -->
@@ -15,12 +23,13 @@
       <!-- icons -->
 		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-      <!-- angular material -->
+      <!-- angular material CSS -->
       <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
 
       <!-- angularJS -->
       <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js">
 
+      <!-- angular material JS-->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
@@ -35,10 +44,10 @@
       <!-- angular material modules -->
       <script src="js/modules/sidenav.js"></script>
 
-      <title>Richard Wu Porfolio </title>
 
-      <!-- favicon -->
-      <link rel="icon" href="img/favicon.png" type="image/png" sizes="16x16">
+      <!-- timeline lib -->
+      <link rel="stylesheet" href="css/lib/style.css"> <!-- Resource style -->
+      <script src="js/lib/modernizr.js"></script> <!-- Modernizr -->
 
     </head>
 
@@ -81,12 +90,12 @@
                 </div>
                 <!-- skills -->
                 <div id="skills_section" ng-controller="skillsCtrl">
-                  <h1 class="md-display-1"> Skills </h1>
+                  <h1 class="md-display-1"> In the Stack </h1>
                   <h3> Web Development </h3>
                   <div class="skills_bar" ng-repeat="skill in skills">
                     <div class="skills_row row">
                       <div class="skill_name col-md-4">
-                        {{skill.skillName}}
+                        <p>{{skill.skillName}}</p>
                       </div>
                       <div class="progress_bar col-md-8">
                         <div class="progress">
@@ -101,7 +110,7 @@
                   <div class="language_bar" ng-repeat="language in languages">
                     <div class="skills_row row">
                       <div class="skill_name col-md-4">
-                        {{language.skillName}}
+                        <p>{{language.skillName}}</p>
                       </div>
                       <div class="progress_bar col-md-8">
                         <div class="progress">
@@ -148,10 +157,183 @@
           <!-- right side nav -->
           <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
             <md-toolbar class="md-theme-light">
-              <h1 class="md-toolbar-tools">Programming Timeline</h1>
+              <h1 class="program_timeline md-toolbar-tools">Programming Timeline</h1>
             </md-toolbar>
+
+            <!-- programming timeline -->
+            <section id="cd-timeline" class="cd-container">
+
+              <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-picture">
+                  <img src="img/cd-icon-location.svg" alt="location">
+                </div>
+
+                <div class="cd-timeline-content">
+                  <h2 class="timeline_title_section">Started Using Angular Material</h2>
+                  <p>This site incorporates Angular Material</p>
+                  <span class="cd-date">August 2015</span>
+                </div>
+              </div>
+<!-- //STARTED BUILDING MINDMCGILL -->
+              <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-location">
+                  <img src="img/cd-icon-location.svg" alt="location">
+                </div>
+
+                <div class="cd-timeline-content">
+                  <h2>Began Building Pennyworth</h2>
+                  <p>Pennyworth is a MEAN stack application that allows users to explore local services</p>
+                  <span class="cd-date">June 2015</span>
+                </div>
+              </div>
+
+              <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-movie">
+                  <img src="img/cd-icon-location.svg" alt="location">
+                </div>
+
+                <div class="cd-timeline-content">
+                  <h2>Started Learning the MEAN Stack</h2>
+                  <p>The MEAN Stack is a fully JavaScript application consisting of MongoDB, Express.js, AngularJS, and Node.js</p>
+                  <span class="cd-date">May 2015</span>
+                </div>
+              </div>
+
+              <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-picture">
+                  <img src="img/cd-icon-location.svg" alt="Location">
+                </div> <!-- cd-timeline-img -->
+
+                <div class="cd-timeline-content">
+                  <h2>Built Frostbite Website</h2>
+                  <p>Frostbite is an Engineering Ice Cream Store at McGill University. This is a static page built using Bootstrap, check it out <a href="frostbite.mcgilleus.ca"  target="_blank">here</a></p>
+                  <span class="cd-date">Feburary 2015</span>
+                </div>
+              </div>
+
+              <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-location">
+                  <img src="img/cd-icon-location.svg" alt="Location">
+                </div>
+
+                <div class="cd-timeline-content">
+                  <h2>Built NXT Autonomous Robot</h2>
+                  <p>In a team of 6, built a autonomous robot capable of localizing within a map, navigation to certain coordinates, and droping &amp picking up objects. Please check out the <a href="https://github.com/yuwu94/ECSE-211/tree/master/DPM"  target="_blank">Github</a> page for more details</p>
+                  <span class="cd-date">September to December 2014</span>
+                </div>
+              </div>
+
+              <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-movie">
+                  <img src="img/cd-icon-location.svg" alt="location">
+                </div>
+
+                <div class="cd-timeline-content">
+                  <h2>Participated in CodeJam() AI Hackathon</h2>
+                  <p>The theme of this hackathon was implementing a face detection algorithm. We didn't fully complete the project, but was able to implement a functional face recognition. Please check out the <a href="https://github.com/yuwu94/CodeJam2014"  target="_blank">Github</a> page for more details </p>
+                  <span class="cd-date">November 2014</span>
+                </div>
+              </div>
+
+              <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-picture">
+                  <img src="img/cd-icon-location.svg" alt="location">
+                </div>
+
+                <div class="cd-timeline-content">
+                  <h2>Introduction to SQL</h2>
+                  <p>Got to work a bit with SQL during the summer internship</p>
+                  <span class="cd-date">July 2014</span>
+                </div>
+              </div>
+
+
+              <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-location">
+                  <img src="img/cd-icon-location.svg" alt="location">
+                </div>
+
+                <div class="cd-timeline-content">
+                  <h2>Exposure to C and Aseembly Language</h2>
+                  <p>Learned about the low level computing and completed projects in C and Assembly</p>
+                  <span class="cd-date">February to April 2014</span>
+                </div>
+              </div>
+
+              <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-movie">
+                  <img src="img/cd-icon-location.svg" alt="location">
+                </div>
+
+                <div class="cd-timeline-content">
+                  <h2>Introduction to Data Structures and Algorithms</h2>
+                  <p>Course taken on fundamental computer science concepts</p>
+                  <span class="cd-date">September 2013 to December 2013</span>
+                </div>
+              </div>
+
+              <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-picture">
+                  <img src="img/cd-icon-location.svg" alt="location">
+                </div>
+
+                <div class="cd-timeline-content">
+                  <h2>Introduction to Web Development</h2>
+                  <p>Joined a start-up as front-end developer. First time learning HTML, CSS, JavaScript, and getting exposure to Bootstrap and other frameworks</p>
+                  <span class="cd-date">May 2013</span>
+                </div>
+              </div>
+
+              <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-location">
+                  <img src="img/cd-icon-location.svg" alt="location">
+                </div>
+
+                <div class="cd-timeline-content">
+                  <h2>Winner of Arduino Design Competition</h2>
+                  <p>Entered in a team of 4 in a mini arduino design competition and placed first.</p>
+                  <span class="cd-date">March 2013</span>
+                </div>
+              </div>
+
+              <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-movie">
+                  <img src="img/cd-icon-location.svg" alt="location">
+                </div>
+
+                <div class="cd-timeline-content">
+                  <h2>Initial exposure to Computer Science - Java</h2>
+                  <p>Course taken during freshmen year of University on introductory Java programming</p>
+                  <span class="cd-date">January 2013</span>
+                </div>
+              </div>
+
+              <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-picture">
+                  <img src="img/cd-icon-location.svg" alt="location">
+                </div>
+
+                <div class="cd-timeline-content">
+                  <h2>First time using the Internet</h2>
+                  <span class="cd-date">2003</span>
+                </div>
+              </div>
+
+              <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-location">
+                  <img src="img/cd-icon-location.svg" alt="location">
+                </div>
+
+                <div class="cd-timeline-content">
+                  <h2>Birth</h2>
+                  <span class="cd-date">1994</span>
+                </div>
+              </div>
+
+            </section>
+
             <md-content ng-controller="RightCtrl" layout-padding>
-              <md-button ng-click="close()" class="md-primary">
+              <md-button ng-click="close()" class="close_timeline md-primary">
                 Close Timeline
               </md-button>
             </md-content>
@@ -159,5 +341,8 @@
         </section>
       </div>
 
+      <!-- timeline script -->
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="js/lib/main.js"></script> <!-- Resource jQuery -->
     </body>
 </html>

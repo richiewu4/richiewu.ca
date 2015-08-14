@@ -139,8 +139,8 @@ i {
 
 /*****right side nav*****/
 md-sidenav {
-	max-width: 1200px;
-	min-width: 1100px;
+	max-width: 50%;
+	min-width: 50%;
 }
 /*
 .program_timeline {
@@ -153,4 +153,9 @@ md-sidenav {
 
 .timeline_title_section {
 	font-size: 50px;
+}
+
+.cd-date {
+
+	margin: 15px;
 }

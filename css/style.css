@@ -56,6 +56,10 @@ body {
 
 /*********************main content*********************/
 
+.all_content {
+	height: 100%;
+}
+
 /*****about*****/
 
 /*about me*/
@@ -117,13 +121,23 @@ body {
 #my_name {
   	margin-top: 50px;
   	text-align: center;
-		color: #000;
-		margin-left: -10%;
+	color: #000;
+	margin-left: -10%;
 }
 
 #my_name h1 {
 	font-size: 50px;
 	font-weight: bolder;
+}
+
+#copyright {
+	color: #fff;
+	opacity: 0.2;
+	bottom: 0;
+	position: absolute;
+}
+.foot_sideNav {
+	text-align: center;
 }
 
 /*#last_name {
@@ -153,6 +167,22 @@ body {
 	margin-top: 10px;
 }
 
+#socialMedia {
+	text-align: center;
+}
+
+.main_img{
+	width: 15%;
+	height: 15%;
+}
+
+#socialMedia li {
+	display: inline;
+	margin-left: -40%;
+
+}
+
+
 i {
 	text-align: center;
 	margin-left: -30%;
@@ -177,6 +207,5 @@ md-sidenav {
 }
 
 .cd-date {
-
 	margin: 15px;
 }

@@ -52,7 +52,7 @@
     </head>
 
     <body ng-app="richiewu">
-      <div ng-controller="AppCtrl" layout="column" style="height:100%;">
+      <div ng-controller="AppCtrl" layout="column" class="all_content">
         <section layout="row" flex>
           <!-- sidenav -->
           <md-sidenav class="leftSideNav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
@@ -60,12 +60,18 @@
             <!-- <i class="fa fa-smile-o fa-5x"></i> -->
             <ul id="sideNavList">
               <li><md-button md-no-ink class="md-primary"><a href="#about">About Me</a></md-button></li>
-              <li><md-button md-no-ink class="md-primary"><a href="#resume">Resume</a></md-button></li>
-              <li><md-button md-no-ink class="md-primary"><a href="#about">Products Blog</a></md-button></li>
+              <li><md-button md-no-ink class="md-primary"><a href="#">Resume</a></md-button></li>
+              <li><md-button md-no-ink class="md-primary"><a href="#">Products Blog</a></md-button></li>
             </ul>
 
-            <ul id="socialMedia">
-            </ul>
+            <div class="foot_sideNav">
+              <ul id="socialMedia">
+<!--                 <li><a href="https://ca.linkedin.com/in/chardwu" target="_blank"><img src ="img/ln.png" class="main_img"></a></li>
+                <li><a href="https://github.com/yuwu94" target="_blank"><img src = "img/gh.png" class="main_img"></a></li> -->
+                <p id="copyright"> Copyright 2015 &copy Richard Wu</p>
+              </ul>
+              
+            </div>
 
           </md-sidenav>
 
@@ -84,9 +90,13 @@
                           I want to join this movement and create an impact in my areas of interest. I am seeking an internship in the Tech Sector! <br/> <br/>
                           Eventually, I want to work as a product manager, but I think to be successful at that, I need to get experience as a Software Engineer first. Thus, that's role I am currently pursuing!
                         </p>
+                        <hr>
                       </div>
                     </div>
                 </div>
+
+                
+
                 <!-- skills -->
                 <div id="skills_section" ng-controller="skillsCtrl">
                   <h1 class="md-display-1"> In the Stack </h1>
@@ -132,7 +142,7 @@
                 <div id="industry_section">
                   <h1 class="md-display-1"> In the Industry </h1>
                   <div class="col-md-10">
-                    <p> My industry experience is quite diverse, even in terms of the roles I played. The last 2 internships have been within the Oil and Gas Industry. After much reflection, the the industry provides a high level of excitement for me so I am aspiring to move forward in that direction! </p>
+                    <p> I have taken various roles in electrical engineering. The last 2 internships have been within the Oil and Gas Industry. My recent interest is in the Tech industry; the fast-paced technology world really excites me.</p>
                   </div>
                   <div class="industry_content">
                   <div class="industry_logo row">
@@ -234,17 +244,20 @@
                   <h1 class="md-display-1"> In the Personal Life</h1>
                   <div class="col-md-10">
                     <p> I was born in Shanghai, and raised in Toronto. I am currently enrolled in post-secondary education in Montreal. I am definitely an extrovert by nature.</p>
+
                   </div>
                   <div class="col-md-10">
                     <h3> Cooking </h3>
                     <p>Cooking was a life or death skill I developed during these past few years at school. I have to say that I have become quite the chef,
                      and now I think of cooking as an art rather than just a skill to feed myself. I like or organize potlucks with my friends to see who can bring on the best dish.
                       <br/> <br/> My current specialties are Lettuce Chicken Wraps, Steamed Ginger Chicken, and my famous Soy Sauce Wings. Gotta get on the Chicken grind! </p>
+                      <hr>
                     <h3> Sports </h3>
                     <p>I was the varsity swim team captain in High School, I placed first in many regional races and made finals at provincials one year.
                       On my down time I love to organize pick up basketball with my buddies. I also love running, in the past few months I've been running about 6 kilometers almost every other day.
                       I used to do a lot of long boarding, it allowed me to disconnect from the world and just be in my own zone. This definitely took a toll on the knee though. <br/> <br/> Definitely have to bring up the sports teams. My favourite sports team are the <b> New York Knicks </b> and the <b> Toronto Raptors </b>.
                       I am also a recent bandwagon of the <b> Toronto Blue Jays </b>.</p>
+                      <hr>
                     <h3> Books </h3>
                     <p>When I get the chance, I am always down for a good book. I usually like to read before I go to bed.
                     I've recently reading more "technical" books like The Lean Start Up. My all time favs would have to be :<b> A Thousand Splendid Suns </b>, <b>When I Stop Talking, You'll Know I'm Dead</b>, and <b> 1984 </b> </p>
@@ -276,15 +289,14 @@
 
             <!-- programming timeline -->
             <section id="cd-timeline" class="cd-container">
-
               <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-picture">
                   <img src="img/cd-icon-location.svg" alt="location">
                 </div>
 
                 <div class="cd-timeline-content">
-                  <h2 class="timeline_title_section">Started Using Angular Material</h2>
-                  <p>This site incorporates Angular Material</p>
+                  <h2 class="timeline_title_section">Built richiewu.ca</h2>
+                  <p>This site was built with AngularJS, Bootstrap, and Angular Material</p>
                   <span class="cd-date">August 2015</span>
                 </div>
               </div>
